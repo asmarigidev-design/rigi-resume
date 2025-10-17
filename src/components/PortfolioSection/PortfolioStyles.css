@@ -1,0 +1,211 @@
+
+        /* استایل‌های عمومی و انیمیشن‌ها */
+        .portfolio-section {
+          position: relative;
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
+        }
+        
+      
+        
+        /* استایل‌های فیلترها */
+        .portfolio-filters {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 3rem;
+          flex-wrap: wrap;
+          gap: 1rem;
+
+        }
+        
+        .portfolio-filters li {
+
+          cursor: pointer;
+          padding: 0.75rem 1.5rem;
+          border-radius: 50px;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          color: #495057;
+          font-weight: 600;
+          backdrop-filter: blur(10px);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .portfolio-filters li::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+          transition: left 0.6s;
+        }
+        
+        .portfolio-filters li:hover::before {
+          left: 100%;
+        }
+        
+        .portfolio-filters li:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-filters li.filter-active {
+        }
+        
+        .filter-icon {
+          font-size: 1.2rem;
+        }
+        
+        /* استایل‌های کارت‌ها */
+        .portfolio-card-wrapper {
+          position: relative;
+          border-radius: 16px;
+          overflow: visible;
+       
+
+        }
+        
+        .portfolio-card {
+          cursor: pointer;
+          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          overflow: hidden;
+          border: none;
+          border-radius: 16px;
+          
+          backdrop-filter: blur(10px);
+          position: relative;
+          z-index: 2;
+          transform: translateY(0);
+
+        }
+        
+
+        
+        .portfolio-card:hover {
+          transform: translateY(-12px) scale(1.02);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8);
+        }
+        
+        .card-hover-effect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          border-radius: 16px;
+          filter: blur(15px);
+          opacity: 0.3;
+          z-index: 1;
+          animation: pulseGlow 2s infinite;
+        }
+        
+        @keyframes pulseGlow {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.5; }
+        }
+        
+        /* استایل‌های تصاویر */
+        .portfolio-image-container {
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px 12px 0 0;
+        }
+        
+        .portfolio-image-container img {
+          transition: all 0.6s ease;
+          width: 100%;
+          height: 240px;
+          object-fit: cover;
+          z-index:-1;
+          
+        }
+        
+        .portfolio-card:hover .portfolio-image-container img {
+          transform: scale(1.1) rotate(1deg);
+        }
+        
+        .portfolio-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: all 0.4s ease;
+         background: linear-gradient(135deg, #667eeab4 0%, #0078ff 100%);
+
+        }
+        
+        .portfolio-card:hover .portfolio-overlay {
+          opacity: 1;
+        }
+       
+.btn {
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  color: #4c51bf;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #e2e8f0, #ffffff);
+  color: #2c3e50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+
+        .portfolio-category-badge {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: #667eea;
+          backdrop-filter: blur(10px);
+        }
+        
+        
+
+.image-buttons {
+  z-index: 2;
+}
+.portfolio-image-container {
+  position: relative;
+}
+
+      
+ 
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+          
+          .portfolio-filters {
+            gap: 0.5rem;
+          }
+          
+          .portfolio-filters li {
+            padding: 1rem 1rem;
+            font-size: 0.875rem;
+          }
+        }
+
+        
